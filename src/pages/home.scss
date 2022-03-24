@@ -64,7 +64,7 @@
   position: absolute;
   width: 20rem;
 
-  bottom: -70vh;
+  bottom: -75vh;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -95,10 +95,10 @@
 // CONTENT CONTAINER
 
 .home-container-content {
-  margin-top: 30rem;
+  margin-top: 40rem;
 
   width: 100vw;
-  padding: 0 5rem;
+  padding: 0 2rem;
 
   color: black;
 
@@ -324,6 +324,7 @@
 
 @media (min-width: 768px) {
   .home-container-content {
+    padding: 0 5rem;
     margin-top: 10rem;
   }
 
