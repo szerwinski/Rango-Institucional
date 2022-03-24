@@ -98,7 +98,6 @@
   margin-top: 40rem;
 
   width: 100vw;
-  padding: 0 2rem;
 
   color: black;
 
@@ -127,7 +126,7 @@
 
   text-align: center;
 
-  width: 30rem;
+  width: 90%;
   height: 45rem;
 
   margin-bottom: 5rem;
@@ -145,11 +144,11 @@
 }
 
 .card-text {
-  font-size: base.$font-medium;
+  font-size: base.$font-small;
 }
 
 .card-icon {
-  width: 25rem;
+  width: 20rem;
 }
 
 .home-section-video {
@@ -158,9 +157,9 @@
   justify-content: center;
 
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
 
-  margin: 10rem auto 0 -5rem;
+  margin-top: 10rem;
 
   background-color: black;
 }
@@ -175,7 +174,6 @@
 .home-section-jobs {
   width: 100vw;
 
-  margin-left: -5rem;
   padding: 15rem 0;
 
   text-align: center;
@@ -191,11 +189,15 @@
   i {
     display: flex;
     margin: 2rem 0;
+    font-size: base.$font-medium
+  }
+
+  span {
+    font-size: base.$font-medium;
   }
 }
 
 .home-section-partner {
-  margin-left: -5rem;
   margin-top: -5rem;
 
   width: 100vw;
@@ -324,7 +326,6 @@
 
 @media (min-width: 768px) {
   .home-container-content {
-    padding: 0 5rem;
     margin-top: 10rem;
   }
 
