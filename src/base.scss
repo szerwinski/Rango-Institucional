@@ -1,0 +1,150 @@
+// GENERAL CONFIG
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: DinPro, sans-serif;
+
+  font-size: 88%;
+}
+
+@font-face {
+  font-family: DinPro;
+  src: url("./fonts/DinPro-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: DinPro;
+  src: url("./fonts/DinPro-Bold.ttf");
+  font-weight: bold;
+}
+
+// VARIABLES
+
+$color-orange: #f18a33;
+$color-green: #52e899;
+
+$font-small: 1.1rem;
+$font-medium: 1.4rem;
+$font-large: 1.7rem;
+
+$font-h1: 2.5rem;
+$font-h1-large: 3rem;
+
+$font-h2: 2rem;
+
+$font-h3: 1.8rem;
+
+$font-copyright: .7rem;
+
+$btn-width-large: 20rem;
+$btn-height-large: 4.5rem;
+
+$shadow-box: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+// REUSABLE STYLES
+
+//Hs
+
+h1 {
+  font-size: $font-h1;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: $font-h2;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: $font-h3;
+  font-weight: bold;
+}
+
+.orange {
+  color: $color-orange;
+}
+
+// BUTTONS
+
+.btn-default {
+  width: 15rem;
+  height: 3.5rem;
+
+  border: 3px solid white;
+  border-radius: 0.5rem;
+
+  background-color: transparent;
+  color: white;
+
+  font-size: $font-medium;
+}
+
+// FORM
+
+@media (min-width: 1024px) {
+  .form-element {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 2rem;
+
+    width: auto;
+    height: 35rem;
+
+    position: relative;
+    overflow-y: visible;
+  }
+
+  .form-button {
+      position: absolute;
+      left: 13rem;
+      bottom: -2rem;
+  }
+}
+
+.form-input {
+  width: 25rem;
+  height: 3.5rem;
+
+  outline: none;
+  border: 3px solid white;
+  border-radius: 0.5rem;
+
+  padding: 0 1rem;
+  margin: 1rem 0;
+
+  font-size: 1rem;
+
+  background-color: transparent;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.form-button {
+  width: 25rem;
+  height: 3.5rem;
+  margin: 2rem 0;
+
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+
+  box-shadow: $shadow-box;
+
+  background-color: white;
+  color: black;
+
+  font-size: $font-small;
+}

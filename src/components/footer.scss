@@ -1,0 +1,57 @@
+@use "../base.scss";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  margin-left: -5rem;
+  margin-top: -1rem;
+  padding: 5rem;
+
+  text-align: start;
+  font-size: base.$font-copyright;
+
+  color: white;
+  background-color: black;
+}
+
+.footer-logo {
+  width: 13rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  width: 20rem;
+  margin: 5rem 0;
+}
+
+.footer-icons {
+  img {
+    width: 4.5rem;
+  }
+
+  img:last-child {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 5rem 15vw;
+  }
+
+  .footer-logo {
+    width: 10rem;
+  }
+
+  .footer-icons {
+    img {
+      width: 4rem;
+    }
+  }
+}
