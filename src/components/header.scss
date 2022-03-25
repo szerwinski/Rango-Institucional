@@ -18,6 +18,9 @@
 .header-link {
     color: base.$color-orange !important;
     font-size: base.$font-small;
+
+    text-decoration: none;
+    margin-top: 1.5rem;
 }
 
 @media(min-width: 1024px) {
@@ -27,5 +30,6 @@
 
     .header-link {
         margin-left: 2rem;
+        margin-top: 0;
     }
 }

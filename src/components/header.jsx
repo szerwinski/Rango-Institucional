@@ -14,19 +14,19 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="header-link" href="/">
+            <Link className="header-link" to="/">
               Home
             </Link>
-            <Link className="header-link" href="/saibamais">
+            <Link className="header-link" to="/sobre">
               Sobre
             </Link>
-            <Link className="header-link" href="/noticias">
+            <Link className="header-link" to="/noticias">
               Conteúdo
             </Link>
-            <Link className="header-link" href="#sejaparceiro">
+            <Link className="header-link" to="#sejaparceiro">
               Seja parceiro
             </Link>
-            <Link className="header-link" href="/plataforma">
+            <Link className="header-link" to="/plataforma">
               Plataforma RanGo
             </Link>
           </Nav>
