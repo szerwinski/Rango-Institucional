@@ -13,6 +13,7 @@ import icon3 from "../assets/icon3.svg";
 import "./home.scss";
 import Form from "../components/form.jsx";
 import Footer from "../components/footer.jsx";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -81,7 +82,7 @@ export default function Home() {
   }
 
   return (
-    <div className="home">
+    <main className="home">
       <Header />
 
       <div className="home-container-landing">
@@ -97,7 +98,9 @@ export default function Home() {
             Perfeito para o seu tempo.
           </p>
 
-          <button className="btn-default">Saiba mais</button>
+          <Link to="saibamais">
+            <button className="btn-default">Saiba mais</button>
+          </Link>
         </section>
 
         <img className="iphone" src={iphone} alt="" />
@@ -190,6 +193,6 @@ export default function Home() {
 
         <Footer />
       </div>
-    </div>
+    </main>
   );
 }

@@ -12,7 +12,7 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link className="header-link" href="/">Home</Nav.Link>
-            <Nav.Link className="header-link" href="/sobre">Sobre</Nav.Link>
+            <Nav.Link className="header-link" href="/saibamais">Sobre</Nav.Link>
             <Nav.Link className="header-link" href="/noticias">Conteúdo</Nav.Link>
             <Nav.Link className="header-link" href="#sejaparceiro">Seja parceiro</Nav.Link>
             <Nav.Link className="header-link" href="/plataforma">Plataforma RanGo</Nav.Link>

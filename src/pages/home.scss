@@ -79,6 +79,10 @@
 
   margin-top: 5rem;
 
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+
   p {
     font-size: base.$font-large;
   }
@@ -168,7 +172,7 @@
   width: 40rem;
   height: 30rem;
 
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .home-section-jobs {
@@ -189,7 +193,7 @@
   i {
     display: flex;
     margin: 2rem 0;
-    font-size: base.$font-medium
+    font-size: base.$font-medium;
   }
 
   span {
@@ -218,14 +222,26 @@
   .home-text {
     margin-top: 20rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .home-container-landing {
+    background-image: url("../assets/background1.jpg");
+  }
+
+  .home-section-calltoaction {
+    position: absolute;
+    bottom: 5rem;
+  }
 
   .home-section-appstores {
     display: flex;
     margin-top: 5rem;
 
+    font-weight: bold;
+
     img {
       width: 10rem;
-      margin-top: 1rem;
     }
 
     a {
@@ -233,10 +249,10 @@
       color: white;
       font-size: base.$font-medium;
 
-      width: 22rem;
-      margin-top: 2rem;
+      width: 21rem;
+      margin-top: 1rem;
 
-      border-bottom: 3px solid white;
+      border-bottom: 5px solid white;
       padding-bottom: 0.5rem;
 
       span img {
@@ -247,37 +263,14 @@
   }
 
   .iphone {
-    width: 18rem;
-    bottom: 5rem;
-    right: 5rem;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .home-container-landing {
-    background-image: url("../assets/background1.jpg");
-  }
-
-  .home-text {
-    margin-top: 15rem;
-  }
-
-  .home-section-appstores {
-    display: flex;
-  }
-
-  .iphone {
-    width: 25rem;
+    width: 20rem;
     bottom: -5rem;
-    right: 10rem;
-    margin-right: 0;
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .home-container-landing {
-    padding: 10rem;
+    padding: 10rem 5rem;
   }
 
   h1 {
@@ -286,19 +279,22 @@
   }
 
   .iphone {
-    right: 0;
-    bottom: -10rem;
-    margin-right: auto;
+    width: 25rem;
   }
 
   .home-section-calltoaction {
     position: absolute;
-    bottom: 10rem;
-    left: 10rem;
+    bottom: 5rem;
+    left: 5rem;
 
     p {
       font-size: base.$font-large;
     }
+  }
+
+  .home-section-appstores {
+    right: 5rem;
+    bottom: 5rem;
   }
 
   .btn-default {
@@ -306,19 +302,6 @@
     height: base.$btn-height-large !important;
 
     margin-top: 2rem;
-  }
-
-  .home-section-appstores {
-    position: absolute;
-    right: 10rem;
-    bottom: 10rem;
-
-    height: 50rem;
-    justify-content: flex-end;
-
-    img {
-      width: 12rem;
-    }
   }
 }
 
