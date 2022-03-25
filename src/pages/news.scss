@@ -1,0 +1,86 @@
+@use "../base.scss";
+
+.news {
+  width: 100vw;
+  height: auto;
+}
+
+.news-banner {
+  width: 100vw;
+  height: 50vh;
+
+  background-image: url("../assets/pizza.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  filter: blur(8px);
+}
+
+.news-text {
+  padding: 2rem;
+
+  h2 {
+    font-size: base.$font-h2-large;
+  }
+
+  p {
+    font-size: base.$font-small;
+  }
+}
+
+.news-card {
+  width: 100%;
+  padding: 5vh;
+  position: relative;
+}
+
+.news-card-image {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.news-card-title {
+  display: flex;
+  margin: 2rem 0;
+  justify-self: center;
+  font-size: base.$font-medium;
+}
+
+.news-card-text {
+  font-size: base.$font-small;
+}
+
+@media (min-width: 1024px) {
+  .news-card-title {
+    position: absolute;
+    left: 30rem;
+  }
+
+  .news-card-text {
+    position: absolute;
+    left: 30rem;
+    top: 8rem;
+  }
+
+  .news-text {
+    padding: 5rem;
+
+    h2 {
+      font-size: base.$font-big;
+    }
+
+    p {
+      font-size: base.$font-medium;
+      width: 50rem;
+    }
+  }
+
+  .news-card {
+    display: flex;
+  }
+
+  .news-card-image {
+    width: 20rem;
+  }
+}

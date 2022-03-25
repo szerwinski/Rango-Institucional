@@ -15,19 +15,19 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link className="header-link" to="/">
-              Home
+              HOME
             </Link>
             <Link className="header-link" to="/sobre">
-              Sobre
+              SOBRE
             </Link>
             <Link className="header-link" to="/noticias">
-              Conteúdo
+              CONTEÚDO
             </Link>
             <Link className="header-link" to="#sejaparceiro">
-              Seja parceiro
+              SEJA PARCEIRO
             </Link>
             <Link className="header-link" to="/plataforma">
-              Plataforma RanGo
+              PLATAFORMA RANGO
             </Link>
           </Nav>
         </Navbar.Collapse>

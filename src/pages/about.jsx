@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Form from "../components/form";
 import avatar1 from "../assets/avatar1.svg";
 import avatar2 from "../assets/avatar2.svg";
 import "./about.scss";
@@ -59,6 +60,9 @@ export default function About() {
           </p>
         </div>
       </section>
+
+			<Form />
+
       <Footer />
     </main>
   );
