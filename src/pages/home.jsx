@@ -98,7 +98,7 @@ export default function Home() {
             Perfeito para o seu tempo.
           </p>
 
-          <Link to="saibamais">
+          <Link to="/sobre">
             <button className="btn-default">Saiba mais</button>
           </Link>
         </section>
