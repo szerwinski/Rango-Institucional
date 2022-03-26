@@ -25,36 +25,40 @@ export default function Download() {
         <section className="download-buttons">
           <h2 className="orange">Plataforma RanGo</h2>
 
-          <div className="download-row">
+          <div className="download-box">
             <p>Instalador para Windows e Mac:</p>
 
-            <button className="btn-download">
-              <p>Windows</p>
-              <img
-                className="button-logo"
-                src="https://img.icons8.com/color/48/000000/windows-logo.png"
-              />
-            </button>
-            <button className="btn-download">
-              <p>Mac</p>
-              <img className="button-logo" src={logoApple} />
-            </button>
+            <div className="buttons-row">
+              <button className="btn-download">
+                <p>Windows</p>
+                <img
+                  className="button-logo"
+                  src="https://img.icons8.com/color/48/000000/windows-logo.png"
+                />
+              </button>
+              <button className="btn-download">
+                <p>Mac</p>
+                <img className="button-logo" src={logoApple} />
+              </button>
+            </div>
           </div>
 
-          <div className="download-row">
+          <div className="download-box">
             <p>Instalador para Android e IOS:</p>
 
-            <button className="btn-download">
-              <p>Android</p>
-              <img
-                className="button-logo"
-                src="https://img.icons8.com/color/48/000000/android-os.png"
-              />
-            </button>
-            <button className="btn-download">
-              <p>IOS</p>
-              <img className="button-logo" src={logoApple} />
-            </button>
+            <div className="buttons-row">
+              <button className="btn-download">
+                <p>Android</p>
+                <img
+                  className="button-logo"
+                  src="https://img.icons8.com/color/48/000000/android-os.png"
+                />
+              </button>
+              <button className="btn-download">
+                <p>IOS</p>
+                <img className="button-logo" src={logoApple} />
+              </button>
+            </div>
           </div>
         </section>
       </div>

@@ -115,7 +115,7 @@ export default function Home() {
           </div>
 
           <a href="#sejaparceiro">
-            Seja um restaurante parceiro{" "}
+            SEJA UM RESTAURANTE PARCEIRO
             <span>
               <img src={arrowWhite} alt="" />
             </span>

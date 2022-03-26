@@ -27,10 +27,6 @@ export default function News() {
 
   useEffect(loadContent);
 
-  window.addEventListener("pageshow", () => {
-    window.scrollTo(0, 0);
-  })
-
   return (
     <main className="news">
       <Header />

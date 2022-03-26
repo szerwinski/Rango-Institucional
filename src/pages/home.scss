@@ -227,7 +227,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .home-container-landing {
     background-image: url("../assets/background1.jpg");
   }
@@ -235,6 +235,11 @@
   .home-section-calltoaction {
     position: absolute;
     bottom: 5rem;
+    left: 5rem;
+
+    p {
+      font-size: base.$font-large;
+    }
   }
 
   .home-section-appstores {
@@ -252,7 +257,7 @@
       color: white;
       font-size: base.$font-medium;
 
-      width: 21rem;
+      width: 24rem;
       margin-top: 1rem;
 
       border-bottom: 5px solid white;
@@ -283,16 +288,6 @@
 
   .iphone {
     width: 25rem;
-  }
-
-  .home-section-calltoaction {
-    position: absolute;
-    bottom: 5rem;
-    left: 5rem;
-
-    p {
-      font-size: base.$font-large;
-    }
   }
 
   .home-section-appstores {
