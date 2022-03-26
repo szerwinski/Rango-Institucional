@@ -7,6 +7,11 @@ import avatar2 from "../assets/avatar2.svg";
 import "./about.scss";
 
 export default function About() {
+
+  window.addEventListener("pageshow", () => {
+    window.scrollTo(0, 0);
+  })
+
   return (
     <main className="about">
       <Header />
