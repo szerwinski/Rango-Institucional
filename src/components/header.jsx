@@ -23,10 +23,11 @@ export default function Header() {
             <Link className="header-link" to="/noticias">
               CONTEÚDO
             </Link>
-            <Link className="header-link" to="#sejaparceiro">
+            <a className="header-link" href="#sejaparceiro">
               SEJA PARCEIRO
-            </Link>
-            <Link className="header-link" to="/plataforma">
+            </a>
+            <Link className="header-link download" to="/plataforma">
+              <span className="header-divider"></span>
               PLATAFORMA RANGO
             </Link>
           </Nav>

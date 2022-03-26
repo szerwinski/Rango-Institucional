@@ -7,7 +7,7 @@ export default function Form() {
   });
 
   return (
-    <main className="form-container">
+    <main id="sejaparceiro" className="form-container">
       <h3>Quer cadastrar seu estabelecimento no RanGo ?</h3>
 
       <p>

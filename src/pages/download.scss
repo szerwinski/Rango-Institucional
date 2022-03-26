@@ -1,0 +1,69 @@
+@use "../base.scss";
+
+.download-container {
+  padding: 15vh 5vw;
+
+  h2 {
+    font-size: base.$font-h2-large;
+  }
+
+  p {
+    font-size: base.$font-small;
+  }
+
+  img {
+    width: 100%;
+    margin: 5rem 0;
+  }
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.5rem;
+
+  width: 100%;
+  height: 4.5rem;
+
+  margin-top: 2rem;
+
+  color: white;
+  overflow: visible;
+  position: relative;
+
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+
+  background-color: base.$color-orange;
+
+  p {
+    font-size: base.$font-small;
+    margin: 0;
+  }
+
+  p::after {
+    content: "";
+    border-right: 3px solid white;
+    position: absolute;
+    height: 2rem;
+    right: 8rem;
+    bottom: 0;
+    top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    border-radius: 10rem;
+  }
+
+  .button-logo {
+    width: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-download {
+    width: 25rem;
+  }
+}

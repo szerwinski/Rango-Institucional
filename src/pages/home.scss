@@ -107,13 +107,14 @@
 
   h2 {
     text-align: center;
+    margin: 0 2rem;
   }
 
   h3 {
     text-align: center;
     font-weight: normal;
 
-    margin: 10rem 0;
+    margin: 10rem 2rem;
   }
 }
 
@@ -131,7 +132,7 @@
   text-align: center;
 
   width: 90%;
-  height: 45rem;
+  height: 35rem;
 
   margin-bottom: 5rem;
   padding: 3rem;
@@ -149,6 +150,8 @@
 
 .card-text {
   font-size: base.$font-small;
+  margin: 2rem 0;
+  overflow-y: hidden;
 }
 
 .card-icon {
@@ -342,6 +345,7 @@
 
   .card-text {
     text-align: start;
+    font-size: base.$font-medium;
   }
 
   .home-section-video {

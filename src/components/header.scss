@@ -1,36 +1,51 @@
-@use '../base';
+@use "../base";
 
 .header {
-    padding: 1rem 0;
+  padding: 1rem 0;
 
-    background-color: rgba($color: white, $alpha: 0.9);
+  background-color: rgba($color: white, $alpha: 0.9);
 }
 
 .header-container {
-    flex-direction: row-reverse;
-    max-width: 90vw;
+  flex-direction: row-reverse;
+  max-width: 90vw;
 }
 
 .header-logo {
-    width: 4rem;
+  width: 4rem;
 }
 
 .header-link {
-    color: base.$color-orange !important;
-    font-size: base.$font-small;
-    font-weight: bold;
+  color: base.$color-orange !important;
+  font-size: base.$font-small;
+  font-weight: bold;
 
-    text-decoration: none;
-    margin-top: 1.5rem;
+  text-decoration: none;
+  margin-top: 1.5rem;
 }
 
-@media(min-width: 1024px) {
-    .header-container {
-        flex-direction: row;
-    }
+@media (min-width: 1024px) {
+  .header-container {
+    flex-direction: row;
+  }
 
-    .header-link {
-        margin-left: 2rem;
-        margin-top: 0;
-    }
+  .header-link {
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+
+  .header-link.download {
+    position: absolute;
+    right: 5vw;
+    overflow: visible;
+  }
+
+  .header-link.download::before {
+    content: '';
+    border-left: 3px solid base.$color-orange;
+    height: 100%;
+    position: absolute;
+    left: -2.5rem;
+  }
+
 }
