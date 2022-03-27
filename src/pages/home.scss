@@ -64,7 +64,7 @@
   position: absolute;
   width: 20rem;
 
-  top: 70vh;
+  top: 80vh;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -152,10 +152,11 @@
   font-size: base.$font-small;
   margin: 2rem 0;
   overflow-y: hidden;
+  height: auto;
 }
 
 .card-icon {
-  width: 20rem;
+  width: 18rem;
 }
 
 .home-section-video {
