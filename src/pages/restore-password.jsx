@@ -15,7 +15,21 @@ export default function RestorePassword() {
   }
 
   function handleDifferentPasswords() {
-    document.getElementById("errortext").classList.add("show")
+    document.getElementById("errortext").classList.add("show");
+  }
+
+  function handleEqualPasswords() {
+    document.querySelector(".restore-password-content").classList.add("hide");
+    document.querySelector(".loader").classList.remove("hide");
+
+    services.handlePasswordRestore(password, passwordConfirm);
+
+    setTimeout(() => {
+      document.querySelector(".loader").classList.add("hide");
+      document
+        .querySelector(".restore-password-success")
+        .classList.remove("hide");
+    }, 3000);
   }
 
   window.addEventListener("submit", (e) => {
@@ -23,7 +37,7 @@ export default function RestorePassword() {
     e.stopImmediatePropagation();
 
     password == passwordConfirm
-      ? services.handlePasswordRestore(password, passwordConfirm)
+      ? handleEqualPasswords()
       : handleDifferentPasswords();
   });
 
@@ -32,14 +46,17 @@ export default function RestorePassword() {
       <Header />
 
       <section className="restore-password-content">
-        <h2 className="orange">Redefinir senha</h2>
+        <h2 className="orange restore-password-title">Redefinir senha</h2>
 
-        <p>Insira sua nova senha nos campos abaixo:</p>
+        <p className="restore-password-text">
+          Insira sua nova senha nos campos abaixo:
+        </p>
 
         <form>
           <label htmlFor="password">Senha:</label>
           <div className="input-container">
             <input
+              required
               className="passwordInput"
               placeholder="*******"
               type={passwordShown ? "text" : "password"}
@@ -58,6 +75,7 @@ export default function RestorePassword() {
 
           <label htmlFor="passwordConfirm">Confirme a senha:</label>
           <input
+            required
             className="passwordInput"
             placeholder="*******"
             type={passwordShown ? "text" : "password"}
@@ -71,6 +89,26 @@ export default function RestorePassword() {
 
           <input type="submit" value="ENVIAR" />
         </form>
+      </section>
+
+      <section className="loader hide">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+
+      <section className="restore-password-success hide">
+        <h2 className="orange restore-password-title">Pronto!</h2>
+
+        <p className="restore-password-text">
+          Sua senha foi alterada, agora você pode fazer login normalmente usando
+          sua nova senha.
+        </p>
+
+        <a href="/">Voltar ao início</a>
       </section>
 
       <Footer />
