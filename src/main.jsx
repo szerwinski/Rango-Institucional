@@ -11,12 +11,14 @@ import RestorePassword from "./pages/restore-password";
 
 import "./base.scss";
 
+const url = "rango-vite.vercel.app/";
+
 ReactDOM.render(
   <BrowserRouter>
     <ScrollToTop />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/sobre" element={<About />} />
+      <Route path={url} element={<Home />} />
+      <Route path={url + "sobre"} element={<About />} />
       <Route path="/noticias" element={<News />} />
       <Route path="/plataforma" element={<Download />} />
       <Route path="/confirmacao-email" element={<EmailConfirmation />} />
