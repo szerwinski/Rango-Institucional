@@ -16,11 +16,11 @@ ReactDOM.render(
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="sobre" element={<About />} />
-      <Route path="noticias" element={<News />} />
-      <Route path="plataforma" element={<Download />} />
-      <Route path="confirmacao-email" element={<EmailConfirmation />} />
-      <Route path="redefinir-senha" element={<RestorePassword />} />
+      <Route path="/sobre" element={<About />} />
+      <Route path="/noticias" element={<News />} />
+      <Route path="/plataforma" element={<Download />} />
+      <Route path="/confirmacao-email" element={<EmailConfirmation />} />
+      <Route path="/redefinir-senha" element={<RestorePassword />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
