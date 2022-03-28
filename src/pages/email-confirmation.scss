@@ -1,0 +1,58 @@
+@use "../base.scss";
+
+.email-confirmation-content {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 15vh 10vw;
+
+  h2 {
+    font-size: base.$font-h2;
+  }
+
+  p {
+    font-size: base.$font-small;
+    margin-top: 2rem;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .email-confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 30rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .email-confirmation-text {
+    width: 30rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .email-confirmation-content {
+    padding: 15vh 15vw;
+
+
+    h2 {
+      font-size: base.$font-h2-large;
+    }
+
+    p {
+      font-size: base.$font-medium;
+    }
+  }
+
+  .email-confirmation-text {
+    width: 40rem;
+  }
+}
