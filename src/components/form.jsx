@@ -47,18 +47,31 @@ export default function Form() {
 
         <form className="form-element">
           <input
+            required
             className="form-input"
             type="text"
             placeholder="Nome completo"
           />
           <input
+            required
             className="form-input"
             type="phone"
             placeholder="Celular (com DDD)"
           />
-          <input className="form-input" type="email" placeholder="E-mail" />
-          <input className="form-input" type="number" placeholder="CPF" />
           <input
+            required
+            className="form-input"
+            type="email"
+            placeholder="E-mail"
+          />
+          <input
+            required
+            className="form-input"
+            type="number"
+            placeholder="CPF"
+          />
+          <input
+            required
             className="form-input"
             type="text"
             placeholder="Nome do restaurante"
@@ -78,8 +91,13 @@ export default function Form() {
             type="text"
             placeholder="Razão social"
           />
-          <input className="form-input" type="text" placeholder="Endereço" />
-          <input className="form-input" type="num" placeholder="CEP" />
+          <input
+            required
+            className="form-input"
+            type="text"
+            placeholder="Endereço"
+          />
+          <input required className="form-input" type="num" placeholder="CEP" />
           <input className="form-button" type="submit" value="ENVIAR" />
         </form>
       </section>

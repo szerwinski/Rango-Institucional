@@ -1,3 +1,5 @@
+import axios from "axios";
+
 class Services {
   async handlePasswordRestore(password, passwordConfirm) {
     const queryString = window.location.search;
@@ -32,7 +34,7 @@ class Services {
   }
 
   timeout(f) {
-    setTimeout(f, 3000)
+    setTimeout(f, 3000);
   }
 }
 
