@@ -21,6 +21,19 @@ class Services {
       }
     );
   }
+
+  async handleFormSubmit(data) {
+    const response = await axios({
+      url: "https://www.staging.rangosemfila.com.br/v2/sendFormMail",
+      method: "post",
+      type: "Application/JSON",
+      data: data,
+    });
+  }
+
+  timeout(f) {
+    setTimeout(f, 3000)
+  }
 }
 
 export { Services };
