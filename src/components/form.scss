@@ -7,11 +7,6 @@
 
   text-align: start;
 
-  width: 100vw;
-
-  padding: 0 3rem;
-  padding-top: 3rem;
-
   background-color: base.$color-orange;
   color: white;
 
@@ -43,6 +38,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100vw;
+
+  padding: 0 3rem;
+  padding-top: 3rem;
 }
 
 .form-element {
