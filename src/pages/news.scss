@@ -31,7 +31,7 @@
 
 .news-card {
   width: 100%;
-  padding: 5vh;
+  padding: 5rem;
   position: relative;
 }
 
@@ -55,6 +55,7 @@
   .news-card-title {
     position: absolute;
     left: 30rem;
+    margin: 0;
   }
 
   .news-card-text {
