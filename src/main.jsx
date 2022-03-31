@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import News from "./pages/news";
@@ -12,7 +12,7 @@ import RestorePassword from "./pages/restore-password";
 import "./base.scss";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
@@ -22,6 +22,6 @@ ReactDOM.render(
       <Route path="confirmacao-email" element={<EmailConfirmation />} />
       <Route path="redefinir-senha" element={<RestorePassword />} />
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
