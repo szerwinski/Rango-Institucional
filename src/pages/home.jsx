@@ -81,6 +81,22 @@ export default function Home() {
     new typeWriter(textElement, textArray, wait);
   }
 
+  window.addEventListener("scroll", handleCardsAnimation);
+
+  function handleCardsAnimation() {
+    let cards = document.querySelectorAll(".card");
+    cards;
+    const revealPoint = 300;
+
+    for (var i = 0; i < cards.length; i++) {
+      let cardTop = cards[i].getBoundingClientRect().top;
+
+      cardTop <= revealPoint
+        ? cards[i].classList.add("slide-top")
+        : cards[i].classList.remove("slide-top");
+    }
+  }
+
   return (
     <main className="home">
       <Header />
@@ -138,7 +154,7 @@ export default function Home() {
         </h3>
 
         <div className="home-section-cards">
-          <div className="card">
+          <div className="card slide-top">
             <img className="card-number" src={one} alt="1." />
 
             <p className="card-text">

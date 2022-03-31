@@ -142,6 +142,11 @@
   box-shadow: base.$shadow-box;
 
   background-color: whitesmoke;
+
+  opacity: 0;
+
+  transition: all ease .5s;
+  transform: translateY(-200px);
 }
 
 .card-number {
@@ -187,6 +192,8 @@
   text-align: center;
 
   background-color: base.$color-orange;
+
+  overflow: hidden;
 
   h3 {
     max-width: 50rem;

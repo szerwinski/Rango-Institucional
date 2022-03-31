@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import "./header.scss";
 
 export default function Header() {
+  function goToForm() {
+    const form = document.getElementById("sejaparceiro");
+
+    form.scrollIntoView();
+  }
+
+  window.addEventListener("pageshow", () => {
+    const form = document.getElementById("sejaparceiro");
+
+    form == null
+      ? document.getElementById("linkToForm").classList.add("hide")
+      : document.getElementById("linkToForm").classList.remove("hide");
+  });
+
   return (
     <Navbar className="header" fixed="top" expand="lg">
       <Container className="header-container">
@@ -14,16 +28,22 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="header-link" to="/">
+            <a className="header-link" href="/">
               HOME
-            </Link>
+            </a>
             <Link className="header-link" to="/sobre">
               SOBRE
             </Link>
             <Link className="header-link" to="/noticias">
               CONTEÚDO
             </Link>
-            <a className="header-link" href="#sejaparceiro">
+            <a
+              className="header-link"
+              onClick={() => {
+                goToForm();
+              }}
+              id="linkToForm"
+            >
               SEJA PARCEIRO
             </a>
             <Link className="header-link download" to="/plataforma">
