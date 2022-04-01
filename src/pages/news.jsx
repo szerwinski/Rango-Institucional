@@ -38,7 +38,7 @@ export default function News() {
 
         <p>
           Aqui você confere todas as novidades do universo RanGo, como novas
-          funcionalidades, novos parceiros, promoções, e muito mais. Fique
+          funcionalidades, parceiros, promoções, e muito mais. Fique
           ligado nas nossas notícias para saber tudo que está rolando e o que
           vai rolar também!
         </p>
