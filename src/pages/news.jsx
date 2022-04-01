@@ -37,10 +37,10 @@ export default function News() {
         <h2 className="orange">Portal de notícias RanGo</h2>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tempora
-          eligendi eum error iste quam fugit debitis totam labore. Aut inventore
-          unde dolorem est eveniet veritatis pariatur asperiores nesciunt
-          suscipit?
+          Aqui você confere todas as novidades do universo RanGo, como novas
+          funcionalidades, novos parceiros, promoções, e muito mais. Fique
+          ligado nas nossas notícias para saber tudo que está rolando e o que
+          vai rolar também!
         </p>
       </section>
 
