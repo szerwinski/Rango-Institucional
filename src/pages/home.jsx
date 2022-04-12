@@ -125,9 +125,13 @@ export default function Home() {
           <p>Baixe o aplicativo!</p>
 
           <div>
-            <img name="appstore" src={appstore} alt="" />
+            <a className="appstoreIcon" href="https://apps.apple.com/br/app/rango/id1562027417">
+              <img name="appstore" src={appstore} alt="" />
+            </a>
 
-            <img name="googleplay" src={googleplay} alt="" />
+            <a className="appstoreIcon" href="">
+              <img name="googleplay" src={googleplay} alt="" />
+            </a>
           </div>
 
           <a href="#sejaparceiro">

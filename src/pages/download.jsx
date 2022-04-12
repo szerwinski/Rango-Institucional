@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import dashboard from "../assets/dashboard.png";
+import dashboard from "../assets/dashboard.svg";
 import logoApple from "../assets/logo_apple.svg";
 import "./download.scss";
 
@@ -21,47 +21,37 @@ export default function Download() {
         </section>
 
         <img src={dashboard} alt="" />
-
-        <section className="download-buttons">
-          <h2 className="orange">Plataforma RanGo</h2>
-
-          <div className="download-box">
-            <p>Instalador para Windows e Mac:</p>
-
-            <div className="buttons-row">
-              <button className="btn-download">
-                <p>Windows</p>
-                <img
-                  className="button-logo"
-                  src="https://img.icons8.com/color/48/000000/windows-logo.png"
-                />
-              </button>
-              <button className="btn-download">
-                <p>Mac</p>
-                <img className="button-logo" src={logoApple} />
-              </button>
-            </div>
-          </div>
-
-          <div className="download-box">
-            <p>Instalador para Android e IOS:</p>
-
-            <div className="buttons-row">
-              <button className="btn-download">
-                <p>Android</p>
-                <img
-                  className="button-logo"
-                  src="https://img.icons8.com/color/48/000000/android-os.png"
-                />
-              </button>
-              <button className="btn-download">
-                <p>IOS</p>
-                <img className="button-logo" src={logoApple} />
-              </button>
-            </div>
-          </div>
-        </section>
       </div>
+
+      <section className="download-section-buttons">
+        <a
+          href="https://www.portal.rangosemfila.com.br/"
+          className="download-button"
+        >
+          <img
+            className="button-logo"
+            src="https://img.icons8.com/color/48/000000/windows-logo.png"
+          />
+        </a>
+
+        <a href="" className="download-button">
+          <img src="https://img.icons8.com/color/48/000000/safari--v1.png" />
+        </a>
+
+        <a
+          href="https://apps.apple.com/br/app/rango/id1562027417"
+          className="download-button"
+        >
+          <img className="button-logo" src={logoApple} />
+        </a>
+
+        <a href="" className="download-button">
+          <img
+            className="button-logo"
+            src="https://img.icons8.com/color/48/000000/android-os.png"
+          />
+        </a>
+      </section>
 
       <Footer />
     </main>

@@ -18,11 +18,11 @@ export default function Footer() {
       </span>
 
       <secion className="footer-icons">
-        <a href="">
+        <a href="https://www.instagram.com/rangosemfila/?hl=en">
           <img src={instagram} alt="" />
         </a>
 
-        <a href="">
+        <a href="https://www.facebook.com/rangosemfila/">
           <img src={facebook} alt="" />
         </a>
       </secion>

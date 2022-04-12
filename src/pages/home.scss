@@ -145,7 +145,7 @@
 
   opacity: 0;
 
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   transform: translateY(-200px);
 }
 
@@ -256,8 +256,16 @@
 
     font-weight: bold;
 
-    img {
-      width: 10rem;
+    .appstoreIcon {
+      text-decoration: none;
+
+      img {
+        width: 10rem;
+      }
+    }
+
+    .appstoreIcon:nth-child(2) {
+      margin-left: 1rem;
     }
 
     a {
