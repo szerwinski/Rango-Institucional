@@ -33,12 +33,17 @@ class Services {
       method: "post",
       type: "Application/JSON",
       data: data,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
 
   timeout(f) {
     setTimeout(f, 3000);
   }
+
+
 }
 
 export { Services };

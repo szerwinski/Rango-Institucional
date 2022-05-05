@@ -153,6 +153,17 @@ export default function Home() {
           #RanGoSemFila <span className="orange">é mudança e inovaçao</span>
         </h2>
 
+        <div className="mobile-appstore-container">
+          <h4>Baixe o app</h4>
+          <a className="mobile-appstore-link" href="">
+            <img src={appstore} alt="" />
+          </a>
+
+          <a className="mobile-appstore-link" href="">
+            <img src={googleplay} alt="" />
+          </a>
+        </div>
+
         <h3>
           Para poupar seu tempo são necessários
           <br />
