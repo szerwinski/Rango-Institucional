@@ -1,116 +1,83 @@
 import React, { useState } from "react";
+import { Col, Form, InputGroup, Row, Button } from "react-bootstrap";
+import { useSearchParams } from "react-router-dom";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import "./restore-password.scss";
 import { Services } from "../hooks/services";
+import "./restore-password.scss";
+
+const services = new Services();
+var password, passwordConfirmation;
 
 export default function RestorePassword() {
-  const [passwordShown, setPasswordShown] = useState(false);
-  let password = "";
-  let passwordConfirm = "";
-  const services = new Services();
+  const [validated, setValidated] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const token = searchParams.get("code");
 
-  function togglePasswordShown() {
-    setPasswordShown(!passwordShown);
-  }
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
 
-  function handleDifferentPasswords() {
-    document.getElementById("errortext").classList.add("show");
-  }
+    setValidated(true);
+  };
 
-  function handleEqualPasswords() {
-    document.querySelector(".restore-password-content").classList.add("hide");
-    document.querySelector(".loader").classList.remove("hide");
-
-    services.handlePasswordRestore(password, passwordConfirm);
-
-    setTimeout(() => {
-      document.querySelector(".loader").classList.add("hide");
-      document
-        .querySelector(".restore-password-success")
-        .classList.remove("hide");
-    }, 3000);
-  }
-
-  window.addEventListener("submit", (e) => {
+  window.addEventListener("submit", async (e) => {
     e.preventDefault();
     e.stopImmediatePropagation();
 
-    password == passwordConfirm
-      ? handleEqualPasswords()
-      : handleDifferentPasswords();
+    const response = await services.handlePasswordRestore(
+      password,
+      passwordConfirmation,
+      token
+    );
+
+    return response;
   });
 
   return (
     <main className="restore-password">
       <Header />
-
       <section className="restore-password-content">
-        <h2 className="orange restore-password-title">Redefinir senha</h2>
-
-        <p className="restore-password-text">
-          Insira sua nova senha nos campos abaixo:
-        </p>
-
-        <form>
-          <label htmlFor="password">Senha:</label>
-          <div className="input-container">
-            <input
+        <h1 className="orange">Redefinir senha</h1>
+        <h4 className="restore-password-h4">
+          Informe sua nova senha e confirme para redefini-la.
+        </h4>
+        <Form
+          className="restore-password-form"
+          noValidate
+          validated={validated}
+          onSubmit={handleSubmit}
+        >
+          <Form.Group md="4" controlId="validationCustom01">
+            <Form.Control
+              className="restore-password-form-input"
               required
-              className="passwordInput"
-              placeholder="*******"
-              type={passwordShown ? "text" : "password"}
-              name="password"
+              type="text"
+              placeholder="SENHA"
               onChange={(e) => {
                 password = e.target.value;
               }}
             />
-            <span
-              onClick={() => togglePasswordShown()}
-              class="material-icons-outlined input-icon"
-            >
-              visibility
-            </span>
-          </div>
-
-          <label htmlFor="passwordConfirm">Confirme a senha:</label>
-          <input
-            required
-            className="passwordInput"
-            placeholder="*******"
-            type={passwordShown ? "text" : "password"}
-            name="passwordConfirm"
-            onChange={(e) => {
-              passwordConfirm = e.target.value;
-            }}
-          />
-
-          <h5 id="errortext">As senhas não são iguais!</h5>
-
-          <input type="submit" value="ENVIAR" />
-        </form>
+          </Form.Group>
+          <Form.Group md="4" controlId="validationCustom02">
+            <Form.Control
+              className="restore-password-form-input"
+              required
+              type="text"
+              placeholder="CONFIRMAR SENHA"
+              onChange={(e) => {
+                passwordConfirmation = e.target.value;
+              }}
+            />
+          </Form.Group>
+          <Button className="restore-password-form-button" type="submit">
+            Enviar
+          </Button>
+        </Form>
       </section>
-
-      <section className="loader hide">
-        <div class="lds-ring">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </section>
-
-      <section className="restore-password-success hide">
-        <h2 className="orange restore-password-title">Pronto!</h2>
-
-        <p className="restore-password-text">
-          Sua senha foi alterada, agora você pode fazer login normalmente usando
-          sua nova senha.
-        </p>
-
-        <a href="/">Voltar ao início</a>
-      </section>
-
       <Footer />
     </main>
   );

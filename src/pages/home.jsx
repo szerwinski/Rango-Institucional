@@ -86,14 +86,13 @@ export default function Home() {
   function handleCardsAnimation() {
     let cards = document.querySelectorAll(".card");
     cards;
-    const revealPoint = 300;
+    const revealPoint = 450;
 
     for (var i = 0; i < cards.length; i++) {
       let cardTop = cards[i].getBoundingClientRect().top;
+      const cardStyle = cards[i].style;
 
-      cardTop <= revealPoint
-        ? cards[i].classList.add("slide-top")
-        : cards[i].classList.remove("slide-top");
+      cardTop < revealPoint ? (cardStyle.opacity = 1) : (cardStyle.opacity = 0);
     }
   }
 
@@ -125,7 +124,10 @@ export default function Home() {
           <p>Baixe o aplicativo!</p>
 
           <div>
-            <a className="appstoreIcon" href="https://apps.apple.com/br/app/rango/id1562027417">
+            <a
+              className="appstoreIcon"
+              href="https://apps.apple.com/br/app/rango/id1562027417"
+            >
               <img name="appstore" src={appstore} alt="" />
             </a>
 
@@ -158,7 +160,7 @@ export default function Home() {
         </h3>
 
         <div className="home-section-cards">
-          <div className="card slide-top">
+          <div className="card">
             <img className="card-number" src={one} alt="1." />
 
             <p className="card-text">
