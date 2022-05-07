@@ -4,6 +4,7 @@ import Header from "../components/header";
 import dashboard from "../assets/dashboard.svg";
 import logoApple from "../assets/logo_apple.svg";
 import "./download.scss";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function Download() {
   return (
@@ -23,35 +24,43 @@ export default function Download() {
         <img src={dashboard} alt="" />
       </div>
 
-      <section className="download-section-buttons">
-        <a
-          href="https://www.portal.rangosemfila.com.br/"
-          className="download-button"
-        >
-          <img
-            className="button-logo"
-            src="https://img.icons8.com/color/48/000000/windows-logo.png"
-          />
-        </a>
+      <Container fluid className="download-section-buttons">
+          <a
+            href="https://www.portal.rangosemfila.com.br/"
+            className="download-button"
+          >
+            <img
+              className="button-logo"
+              src="https://img.icons8.com/color/96/000000/chrome--v1.png"
+            />
+          </a>
 
-        <a href="" className="download-button">
-          <img src="https://img.icons8.com/color/48/000000/safari--v1.png" />
-        </a>
+          <a
+            href="https://www.portal.rangosemfila.com.br/"
+            className="download-button"
+          >
+            <img
+              className="button-logo"
+              src="https://img.icons8.com/color/48/000000/windows-logo.png"
+            />
+          </a>
+          <a href="" className="download-button">
+            <img src="https://img.icons8.com/color/48/000000/safari--v1.png" />
+          </a>
 
-        <a
-          href="https://apps.apple.com/br/app/rango/id1562027417"
-          className="download-button"
-        >
-          <img className="button-logo" src={logoApple} />
-        </a>
-
-        <a href="" className="download-button">
-          <img
-            className="button-logo"
-            src="https://img.icons8.com/color/48/000000/android-os.png"
-          />
-        </a>
-      </section>
+          <a
+            href="https://apps.apple.com/br/app/rango/id1562027417"
+            className="download-button"
+          >
+            <img className="button-logo" src={logoApple} />
+          </a>
+          <a href="" className="download-button">
+            <img
+              className="button-logo"
+              src="https://img.icons8.com/color/48/000000/android-os.png"
+            />
+          </a>
+      </Container>
 
       <Footer />
     </main>

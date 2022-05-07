@@ -155,11 +155,11 @@ export default function Home() {
 
         <div className="mobile-appstore-container">
           <h4>Baixe o app</h4>
-          <a className="mobile-appstore-link" href="">
+          <a className="mobile-appstore-link" href="https://apps.apple.com/br/app/rango/id1562027417">
             <img src={appstore} alt="" />
           </a>
 
-          <a className="mobile-appstore-link" href="">
+          <a className="mobile-appstore-link" href="https://play.google.com/store/apps/details?id=br.com.rangosemfila.rangoapp">
             <img src={googleplay} alt="" />
           </a>
         </div>

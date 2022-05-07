@@ -17,7 +17,9 @@
 
   img {
     width: 100%;
-    margin: 5rem 0;
+    margin: 7rem auto;
+    max-width: 100rem;
+    padding-left: 10%;
   }
 }
 
@@ -26,10 +28,13 @@
 }
 
 .download-section-buttons {
-  display: flex;
-  width: 100%;
-  margin: auto auto 7rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   padding: 2rem;
+  margin: auto auto 7rem auto;
+  align-items: center;
+  justify-items: center;
+
 }
 
 .download-button {
@@ -55,8 +60,6 @@
 @media (min-width: 768px) {
   .download-section-buttons {
     width: 40rem;
-    border: 5px solid base.$color-orange;
-    border-radius: .5rem;
   }
 }
 
@@ -71,11 +74,6 @@
     p {
       font-size: base.$font-medium;
     }
-
-    img {
-      width: 60rem;
-      margin: 5rem 0;
-    }
   }
 
   .download-section-buttons {
@@ -88,14 +86,6 @@
 
     img {
       width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 1600px) {
-  .download-container {
-    img {
-      width: 100rem;
     }
   }
 }
