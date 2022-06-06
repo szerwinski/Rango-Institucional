@@ -8,23 +8,17 @@ class Services {
       code: token,
     };
 
-    console.log(`corpo request api: ${JSON.stringify(body)}`);
+    console.log(body);
 
-    try {
-      const response = await axios({
-        url: "https://www.api.rangosemfila.com.br/v2/auth/reset-password",
-        method: "post",
-        type: "Application/JSON",
-        data: body,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+    const response = await axios({
+      url: "https://www.api.rangosemfila.com.br/v2/auth/reset-password",
+      method: "post",
+      type: "Application/JSON",
+      data: body,
+    });
 
-      console.log(`response chamada api: ${response}`);
-    } catch (e) {
-      console.error(`erro chamada api: ${e}`);
-    }
+    console.log(`response redefinir senha: ${response}`);
+    return response;
   }
 
   async handleFormSubmit(data) {
@@ -42,8 +36,6 @@ class Services {
   timeout(f) {
     setTimeout(f, 3000);
   }
-
-
 }
 
 export { Services };

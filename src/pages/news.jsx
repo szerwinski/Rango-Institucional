@@ -1,13 +1,16 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import "./news.scss";
 
 export default function News() {
   async function loadContent() {
+    document.querySelector(".loading").style.display = "flex";
+
     const response = await axios.get(
-      "https://www.staging.rangosemfila.com.br/v2/contents?targets[identifier]=LandingPage"
+      "https://www.api.rangosemfila.com.br/v2/contents?targets[identifier]=LandingPage"
     );
 
     const data = response.data;
@@ -23,6 +26,8 @@ export default function News() {
 
       document.getElementById("news-content").innerHTML += newElement;
     });
+
+    document.querySelector(".loading").style.display = "none";
   }
 
   useEffect(loadContent);
@@ -38,13 +43,15 @@ export default function News() {
 
         <p>
           Aqui você confere todas as novidades do universo RanGo, como novas
-          funcionalidades, parceiros, promoções, e muito mais. Fique
-          ligado nas nossas notícias para saber tudo que está rolando e o que
-          vai rolar também!
+          funcionalidades, parceiros, promoções, e muito mais. Fique ligado nas
+          nossas notícias para saber tudo que está rolando e o que vai rolar
+          também!
         </p>
       </section>
 
-      <section id="news-content" className="news-content"></section>
+      <section id="news-content" className="news-content">
+        <Spinner className="loading" animation="border" role="status"></Spinner>
+      </section>
 
       <Footer />
     </main>

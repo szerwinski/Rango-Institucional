@@ -12,7 +12,7 @@ var password, passwordConfirmation;
 export default function RestorePassword() {
   const [validated, setValidated] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-  const token = searchParams.get("code");
+  const code = searchParams.get("code");
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -31,10 +31,10 @@ export default function RestorePassword() {
     const response = await services.handlePasswordRestore(
       password,
       passwordConfirmation,
-      token
+      code
     );
 
-    return response;
+    console.log(response);
   });
 
   return (

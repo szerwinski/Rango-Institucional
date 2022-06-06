@@ -51,6 +51,13 @@
   font-size: base.$font-small;
 }
 
+.loading {
+  display: none;
+  margin: 3rem auto 10rem auto;
+  color: base.$color-orange;
+  font-size: 1.3rem;
+}
+
 @media (min-width: 1024px) {
   .news-card-title {
     position: absolute;
