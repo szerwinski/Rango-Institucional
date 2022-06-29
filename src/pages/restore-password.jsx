@@ -1,41 +1,37 @@
 import React, { useState } from "react";
-import { Col, Form, InputGroup, Row, Button } from "react-bootstrap";
-import { useSearchParams } from "react-router-dom";
+import { Col, Form, InputGroup, Row, Button, Spinner } from "react-bootstrap";
+import { useParams, useSearchParams } from "react-router-dom";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { Services } from "../hooks/services";
 import "./restore-password.scss";
 
 const services = new Services();
-var password, passwordConfirmation;
 
 export default function RestorePassword() {
-  const [validated, setValidated] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const code = searchParams.get("code");
+  let [validated, setValidated] = useState(false);
+  let [password, setPassword] = useState(undefined);
+  let [passwordConfirmation, setPasswordConfirmation] = useState(undefined);
+  let { code } = useParams();
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
+  async function handleSubmit(event) {
+    event.preventDefault();
     setValidated(true);
-  };
 
-  window.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    e.stopImmediatePropagation();
+    const requestBody = {
+      password: password,
+      passwordConfirmation: passwordConfirmation,
+      code: code,
+    };
 
-    const response = await services.handlePasswordRestore(
-      password,
-      passwordConfirmation,
-      code
-    );
+    console.log(requestBody);
 
+    document.querySelector(".restore-password-content").style.display = "none";
+    document.querySelector(".success").style.display = "flex";
+
+    let response = await services.handlePasswordRestore(requestBody);
     console.log(response);
-  });
+  }
 
   return (
     <main className="restore-password">
@@ -49,7 +45,9 @@ export default function RestorePassword() {
           className="restore-password-form"
           noValidate
           validated={validated}
-          onSubmit={handleSubmit}
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
         >
           <Form.Group md="4" controlId="validationCustom01">
             <Form.Control
@@ -58,7 +56,7 @@ export default function RestorePassword() {
               type="text"
               placeholder="SENHA"
               onChange={(e) => {
-                password = e.target.value;
+                setPassword(e.target.value);
               }}
             />
           </Form.Group>
@@ -69,7 +67,7 @@ export default function RestorePassword() {
               type="text"
               placeholder="CONFIRMAR SENHA"
               onChange={(e) => {
-                passwordConfirmation = e.target.value;
+                setPasswordConfirmation(e.target.value);
               }}
             />
           </Form.Group>
@@ -78,7 +76,23 @@ export default function RestorePassword() {
           </Button>
         </Form>
       </section>
+
+      <div className="success">
+        <span class="material-symbols-rounded">check_circle</span>
+
+        <strong>
+          Tudo pronto!
+          <br />
+          <p>Você já pode utilizar sua nova senha para fazer login.</p>
+        </strong>
+      </div>
       <Footer />
+
+      <div className="loading">
+        <Spinner className="spinner" animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
     </main>
   );
 }

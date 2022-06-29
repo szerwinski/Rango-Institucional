@@ -98,6 +98,45 @@
 
 // CONTENT CONTAINER
 
+.mediaContainer {
+  background-color: base.$color-orange;
+
+  margin-bottom: 10rem;
+
+  .mediaText {
+    padding: 5rem 2rem 0 2rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+
+    @media(min-width: 1024px) {
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 60vh;
+
+  .mediaImg {
+    display: flex;
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
+
+    border-radius: 1rem;
+  }
+}
+
 .mobile-appstore-container {
   display: flex;
   flex-direction: column;
@@ -362,7 +401,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .home-container-content {
     margin-top: 15rem;
   }

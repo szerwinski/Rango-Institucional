@@ -1,15 +1,7 @@
 import axios from "axios";
 
 class Services {
-  async handlePasswordRestore(password, passwordConfirm, token) {
-    const body = {
-      password: password,
-      passwordConfirmation: passwordConfirm,
-      code: token,
-    };
-
-    console.log(body);
-
+  async handlePasswordRestore(body) {
     const response = await axios({
       url: "https://www.api.rangosemfila.com.br/v2/auth/reset-password",
       method: "post",
@@ -17,7 +9,7 @@ class Services {
       data: body,
     });
 
-    console.log(`response redefinir senha: ${response}`);
+    console.log(response);
     return response;
   }
 

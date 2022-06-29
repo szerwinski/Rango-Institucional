@@ -14,6 +14,10 @@ import "./home.scss";
 import Form from "../components/form.jsx";
 import Footer from "../components/footer.jsx";
 import { Link } from "react-router-dom";
+import LogoJBR from "../assets/jbr.png";
+import LogoTimes from "../assets/times.png";
+import LogoAgencia from "../assets/agenciainforma.png";
+import { Carousel } from "react-bootstrap";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -146,6 +150,32 @@ export default function Home() {
       </div>
 
       <div className="home-container-content">
+        <div className="mediaContainer">
+          <div className="mediaText">
+            <h2>RanGo na mídia!</h2>
+
+            <h4>Confira algumas matérias sobre o RanGo sem Fila!</h4>
+          </div>
+
+          <Carousel className="media" variant="dark">
+            <Carousel.Item>
+              <a href="https://jornaldebrasilia.com.br/estilo-de-vida/gastronomia/rango-estudantes-criam-app-de-alimentacao-para-centros-universitarios/#.YrxUO34qkTI.whatsapp">
+                <img className="mediaImg" src={LogoJBR} alt="First slide" />
+              </a>
+            </Carousel.Item>
+            <Carousel.Item>
+              <a href="https://timesbrasilia.com.br/destaque/rango-app-de-alimentacao-para-centros-universitarios-e-criado-no-ceub/">
+                <img className="mediaImg" src={LogoTimes} alt="Second slide" />
+              </a>
+            </Carousel.Item>
+            <Carousel.Item>
+              <a href="https://agenciainforma.app.br/rango-app-de-alimentacao-para-centros-universitarios-e-criado-no-ceub/">
+                <img className="mediaImg" src={LogoAgencia} alt="Third slide" />
+              </a>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+
         <h2>
           <span className="orange">#RanGoSemFila</span> minimiza o tempo gasto
           em filas.
@@ -155,11 +185,17 @@ export default function Home() {
 
         <div className="mobile-appstore-container">
           <h4>Baixe o app</h4>
-          <a className="mobile-appstore-link" href="https://apps.apple.com/br/app/rango/id1562027417">
+          <a
+            className="mobile-appstore-link"
+            href="https://apps.apple.com/br/app/rango/id1562027417"
+          >
             <img src={appstore} alt="" />
           </a>
 
-          <a className="mobile-appstore-link" href="https://play.google.com/store/apps/details?id=br.com.rangosemfila.rangoapp">
+          <a
+            className="mobile-appstore-link"
+            href="https://play.google.com/store/apps/details?id=br.com.rangosemfila.rangoapp"
+          >
             <img src={googleplay} alt="" />
           </a>
         </div>

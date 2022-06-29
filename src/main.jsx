@@ -20,7 +20,7 @@ ReactDOM.render(
       <Route path="noticias" element={<News />} />
       <Route path="plataforma" element={<Download />} />
       <Route path="confirmacao-email" element={<EmailConfirmation />} />
-      <Route path="redefinir-senha" element={<RestorePassword />} />
+      <Route path="redefinir-senha/:code" element={<RestorePassword />} />
     </Routes>
   </HashRouter>,
   document.getElementById("root")
