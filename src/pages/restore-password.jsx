@@ -12,7 +12,8 @@ export default function RestorePassword() {
   let [validated, setValidated] = useState(false);
   let [password, setPassword] = useState(undefined);
   let [passwordConfirmation, setPasswordConfirmation] = useState(undefined);
-  let { code } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const code = searchParams.get("code");
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -23,8 +24,6 @@ export default function RestorePassword() {
       passwordConfirmation: passwordConfirmation,
       code: code,
     };
-
-    console.log(requestBody);
 
     document.querySelector(".restore-password-content").style.display = "none";
     document.querySelector(".success").style.display = "flex";
