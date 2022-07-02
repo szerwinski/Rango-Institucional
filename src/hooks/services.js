@@ -3,7 +3,7 @@ import axios from "axios";
 class Services {
   async handlePasswordRestore(body) {
     const response = await axios({
-      url: "https://www.staging.rangosemfila.com.br/v2/auth/reset-password",
+      url: "https://www.api.rangosemfila.com.br/v2/auth/reset-password",
       method: "post",
       type: "Application/JSON",
       data: body,
