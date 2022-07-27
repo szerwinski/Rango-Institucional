@@ -8,6 +8,7 @@ import Download from "./pages/download";
 import ScrollToTop from "./hooks/scrolltop";
 import EmailConfirmation from "./pages/email-confirmation";
 import RestorePassword from "./pages/restore-password";
+import LinksPage from "./pages/linksPage";
 
 import "./base.scss";
 
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Route path="plataforma" element={<Download />} />
       <Route path="confirmacao-email" element={<EmailConfirmation />} />
       <Route path="redefinir-senha" element={<RestorePassword />} />
+      <Route path="links" element={<LinksPage />} />
     </Routes>
   </HashRouter>,
   document.getElementById("root")

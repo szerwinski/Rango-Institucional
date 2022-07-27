@@ -1,0 +1,62 @@
+@use "../base.scss";
+
+main {
+  position: relative;
+}
+
+.linksContent {
+  width: 100vw;
+  min-height: 100vh;
+
+  padding: 10rem 10%;
+
+  h1 {
+    margin-bottom: 2rem;
+    color: base.$color-orange;
+  }
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 2rem;
+    width: 25rem;
+    padding: 1.1rem 1.5rem;
+    border-left: 40px solid base.$color-orange;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+
+    background-color: rgba($color: black, $alpha: 0.8);
+
+    p {
+      margin: 0;
+    }
+
+    img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 2rem;
+    }
+  }
+}
+
+#linksImage {
+  margin: 5rem auto 0 auto;
+  width: 25rem;
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    right: 5%;
+    top: 10rem;
+    width: 35rem;
+  }
+}
