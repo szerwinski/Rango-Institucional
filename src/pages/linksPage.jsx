@@ -16,33 +16,41 @@ export default function LinksPage() {
       <section className="links">
         <div className="linksContainer">
           <ul>
-            <li>
-              <img src={fb} alt="" />
+            <a target="_blank" href="https://www.facebook.com/rangosemfila">
+              <li>
+                <img src={fb} alt="Facebook" />
 
-              <i>/rangosemfila</i>
-            </li>
-            <li>
-              <img src={insta} alt="" />
+                <i>/rangosemfila</i>
+              </li>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/rangosemfila/">
+              <li>
+                <img src={insta} alt="Instagram" />
 
-              <i>@rangosemfila</i>
-            </li>
-            <li>
-              <img src={tiktok} alt="" />
+                <i>@rangosemfila</i>
+              </li>
+            </a>
+            <a target="_blank" href="https://www.tiktok.com/@rangosemfila">
+              <li>
+                <img src={tiktok} alt="TikTok" />
 
-              <i>@rangosemfila</i>
-            </li>
-            <li>
-              <img src={twitter} alt="" />
+                <i>@rangosemfila</i>
+              </li>
+            </a>
+            <a target="_blank" href="https://twitter.com/rangosemfila">
+              <li>
+                <img src={twitter} alt="Twitter" />
 
-              <i>@rangosemfila</i>
-            </li>
+                <i>@rangosemfila</i>
+              </li>
+            </a>
           </ul>
-        </div>
 
-        <div
-          className="linksImage"
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
+          <div
+            className="linksImage"
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        </div>
       </section>
 
       <Footer />
