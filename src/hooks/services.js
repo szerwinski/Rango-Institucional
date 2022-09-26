@@ -14,15 +14,12 @@ class Services {
   }
 
   async handleFormSubmit(data) {
-    const response = await axios({
-      url: "https://www.api.rangosemfila.com.br/v2/sendFormMail",
-      method: "post",
-      type: "Application/JSON",
-      data: data,
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const response = await axios.post(
+      "https://www.api.rangosemfila.com.br/v2/sendFormMail",
+      data
+    );
+
+    console.log(response);
   }
 
   timeout(f) {

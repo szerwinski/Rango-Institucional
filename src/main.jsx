@@ -11,6 +11,7 @@ import RestorePassword from "./pages/restore-password";
 import LinksPage from "./pages/linksPage";
 
 import "./base.scss";
+import OndeEstamos from "./pages/ondeestamos";
 
 ReactDOM.render(
   <HashRouter>
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="confirmacao-email" element={<EmailConfirmation />} />
       <Route path="redefinir-senha" element={<RestorePassword />} />
       <Route path="links" element={<LinksPage />} />
+      <Route path="ondeestamos" element={<OndeEstamos />} />
     </Routes>
   </HashRouter>,
   document.getElementById("root")

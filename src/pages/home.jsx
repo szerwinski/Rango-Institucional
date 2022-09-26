@@ -238,13 +238,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="home-section-video">
-          <iframe
-            className="video"
-            src="https://www.youtube.com/embed/PZ4pctQMdg4?autoplay=1&loop=1"
-          ></iframe>
-        </div>
-
         <div className="home-section-jobs">
           <h3>
             <b>Nosso tempo é valioso demais para ser desperdiçado em filas</b>

@@ -1,9 +1,12 @@
 import React from "react";
 import { Services } from "../hooks/services";
 import "./form.scss";
+import $ from "jquery";
+
+const services = new Services();
 
 export default function Form() {
-  window.addEventListener("submit", (e) => {
+  window.addEventListener("submit", async (e) => {
     e.preventDefault();
     e.stopImmediatePropagation();
 
@@ -13,15 +16,16 @@ export default function Form() {
 
     const data = {};
 
-    const inputs = document.querySelectorAll(".form-input");
-    inputs.forEach((element) => {
-      data[element.name] = element.value;
+    const inputs = $(".form-input");
+
+    inputs.map((index, el) => {
+      console.log(el);
+
+      data[el.name] = el.value;
     });
 
-    const services = new Services();
-
     try {
-      services.handleFormSubmit(data);
+      await services.handleFormSubmit(data);
     } catch (error) {
       console.error(error);
     }
@@ -51,54 +55,71 @@ export default function Form() {
             className="form-input"
             type="text"
             placeholder="Nome completo"
+            name="name"
           />
           <input
             required
-            className="form-input"
+            className="form-input phone"
             type="phone"
             placeholder="Celular (com DDD)"
+            name="phoneNumber"
           />
           <input
             required
             className="form-input"
             type="email"
             placeholder="E-mail"
+            name="email"
           />
           <input
             required
-            className="form-input"
+            className="form-input cpf"
             type="number"
             placeholder="CPF"
+            name="cpf"
           />
           <input
             required
             className="form-input"
             type="text"
             placeholder="Nome do restaurante"
+            name="restaurantName"
           />
           <input
-            className="form-input"
+            className="form-input phone"
             type="phone"
             placeholder="Telefone comercial (caso possua)"
+            name="comercialPhoneNumber"
           />
           <input
             className="form-input"
             type="text"
             placeholder="CNPJ (caso possua)"
+            name="cnpj"
           />
           <input
             className="form-input"
             type="text"
             placeholder="Razão social"
+            name="razaoSocial"
           />
           <input
             required
             className="form-input"
             type="text"
             placeholder="Endereço"
+            name="address"
           />
-          <input required className="form-input" type="num" placeholder="CEP" />
-          <input className="form-button" type="submit" value="ENVIAR" />
+          <input
+            required
+            className="form-input"
+            type="num"
+            placeholder="CEP"
+            name="cep"
+          />
+          <button className="form-button" type="submit">
+            Enviar
+          </button>
         </form>
       </section>
 

@@ -46,6 +46,9 @@ export default function Header() {
             >
               SEJA PARCEIRO
             </a>
+            <Link className="header-link" to="/ondeestamos">
+              ONDE ESTAMOS
+            </Link>
             <Link className="header-link download" to="/plataforma">
               <span className="header-divider"></span>
               PLATAFORMA RANGO

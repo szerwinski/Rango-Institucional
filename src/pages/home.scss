@@ -111,8 +111,7 @@
       margin-bottom: 2rem;
     }
 
-
-    @media(min-width: 1024px) {
+    @media (min-width: 1024px) {
       h2 {
         font-size: 2.5rem;
       }
@@ -226,26 +225,6 @@
 
 .card-icon {
   width: 18rem;
-}
-
-.home-section-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100vw;
-  height: 70vh;
-
-  margin-top: 10rem;
-
-  background-color: black;
-}
-
-.video {
-  width: 40rem;
-  height: 30rem;
-
-  border-radius: 0.5rem;
 }
 
 .home-section-jobs {
@@ -390,15 +369,6 @@
   .home-container-content {
     margin-top: 10rem;
   }
-
-  .home-section-video {
-    height: 40rem;
-  }
-
-  .video {
-    width: 50rem;
-    height: 30rem;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -423,24 +393,10 @@
     text-align: start;
     font-size: base.$font-medium;
   }
-
-  .home-section-video {
-    height: 60rem;
-  }
-
-  .video {
-    width: 60rem;
-    height: 35rem;
-  }
 }
 
-@media (min-width: 1600px) {
-  .home-section-video {
-    height: 60rem;
-  }
-
-  .video {
-    width: 80rem;
-    height: 45rem;
+form {
+  ::placeholder {
+    color: white !important;
   }
 }
