@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import Header from "../components/header";
+import arrow from "../assets/arrow.png";
+import ceubLogo from "../assets/ceub.jpeg";
+import catolica from "../assets/catolica.jpg";
+import udfLogo from "../assets/udf.png";
+import Footer from "../components/footer";
+import $ from "jquery";
 
 import "./ondeestamos.scss";
 
@@ -64,6 +70,14 @@ const udf = [
 ];
 
 export default class OndeEstamos extends Component {
+  componentDidMount() {
+    $(".carousel-control-prev-icon").css({ backgroundImage: `url(${arrow})` });
+    $(".carousel-control-next-icon").css({
+      backgroundImage: `url(${arrow})`,
+      transform: "scale(-1, -1)",
+    });
+  }
+
   render() {
     return (
       <main className="ondeestamos">
@@ -72,7 +86,7 @@ export default class OndeEstamos extends Component {
         <div className="ondeestamosBanner"></div>
 
         <div className="ondeestamosHeader">
-          <h2>Veja em quais instituições já estamos presente!</h2>
+          <h2>Veja em quais instituições já estamos presentes!</h2>
 
           <p>
             Nosso foco está em poupar o tempo dos universitários proporcionando
@@ -84,8 +98,15 @@ export default class OndeEstamos extends Component {
         <Carousel id="carousel">
           <Carousel.Item>
             <div className="carouselCard">
-              <h2>UniCeub</h2>
-              <p>Restaurantes parceiros: </p>
+              <div className="cardHeader">
+                <img src={ceubLogo} alt="" />
+
+                <h2>
+                  UniCeub
+                  <br />
+                  <p>Restaurantes parceiros: </p>
+                </h2>
+              </div>
 
               <div className="icons">
                 {ceub.map((el) => {
@@ -102,8 +123,15 @@ export default class OndeEstamos extends Component {
 
           <Carousel.Item>
             <div className="carouselCard">
-              <h2>UCB</h2>
-              <p>Restaurantes parceiros: </p>
+              <div className="cardHeader">
+                <img src={catolica} alt="" />
+
+                <h2>
+                  UCB
+                  <br />
+                  <p>Restaurantes parceiros: </p>
+                </h2>
+              </div>
 
               <div className="icons">
                 {ucb.map((el) => {
@@ -120,8 +148,15 @@ export default class OndeEstamos extends Component {
 
           <Carousel.Item>
             <div className="carouselCard">
-              <h2>UDF</h2>
-              <p>Restaurantes parceiros: </p>
+              <div className="cardHeader">
+                <img src={udfLogo} alt="" />
+
+                <h2>
+                  UDF
+                  <br />
+                  <p>Restaurantes parceiros: </p>
+                </h2>
+              </div>
 
               <div className="icons">
                 {udf.map((el) => {
@@ -136,6 +171,8 @@ export default class OndeEstamos extends Component {
             </div>
           </Carousel.Item>
         </Carousel>
+
+        <Footer />
       </main>
     );
   }

@@ -9,7 +9,7 @@
     align-items: center;
 
     .carouselCard {
-      width: 20rem;
+      width: 40rem !important;
       height: 44rem;
       width: 50%;
       background-color: white;
@@ -17,14 +17,30 @@
       border-radius: 0.5rem;
       padding: 2rem;
 
+      .cardHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        img {
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          margin-right: 2rem;
+          border: 1px solid grey;
+        }
+      }
+
       h2 {
         color: orange;
-        font-size: 3rem;
+        font-size: 2rem;
+        margin: 0;
       }
 
       p {
         color: grey;
-        font-size: 2rem;
+        font-size: 1.3rem;
+        margin: 0;
       }
 
       .icons {
@@ -38,7 +54,7 @@
           flex-direction: column;
           align-items: center;
           width: 15rem;
-          margin: 2rem 1rem;
+          margin: 1rem;
 
           strong {
             font-size: 1.5em;
@@ -47,9 +63,10 @@
           }
 
           img {
-            width: 7rem;
-            height: 7rem;
+            width: 5rem;
+            height: 5rem;
             border-radius: 50%;
+            border: 1px solid grey;
           }
         }
       }
@@ -59,7 +76,8 @@
       margin: 0 2rem;
 
       .carouselCard {
-        width: 90%;
+          border: 1px solid grey;
+          width: 90%;
       }
     }
   }
@@ -78,11 +96,11 @@
     padding: 3rem;
     h2 {
       color: base.$color-orange;
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     @media (min-width: 1024px) {
