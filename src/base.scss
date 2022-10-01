@@ -115,7 +115,6 @@ $shadow-box: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 // ANIMATIONS
 
-
 //Hs
 
 h1 {
@@ -231,4 +230,28 @@ h3 {
 
 a.header-link.download {
   background: transparent !important;
+}
+
+.multipleImagesBanner {
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+
+  .imageDiv {
+    width: 17%;
+    height: 100%;
+    min-width: 25rem;
+    overflow: scroll;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .imageDiv::-webkit-scrollbar {
+    display: none;
+  }
 }

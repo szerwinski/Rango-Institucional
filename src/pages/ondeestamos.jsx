@@ -8,14 +8,11 @@ import udfLogo from "../assets/udf.png";
 import Footer from "../components/footer";
 import $ from "jquery";
 
+import images from "../assets/index";
+
 import "./ondeestamos.scss";
 
 const ceub = [
-  {
-    name: "Banzos Burguer",
-    image:
-      "https://s3.sa-east-1.amazonaws.com/restaurants.images/31/profile/thumbnail_31_profile_png_51c5c0aa13.png",
-  },
   {
     name: "Rei Arthur Pastelaria",
     image:
@@ -48,6 +45,11 @@ const ucb = [
     name: "Fada Café",
     image:
       "https://s3.sa-east-1.amazonaws.com/restaurants.images/30/profile/thumbnail_30_profile_png_1e7691e20f.png",
+  },
+  {
+    name: "Banzos Burguer",
+    image:
+      "https://s3.sa-east-1.amazonaws.com/restaurants.images/31/profile/thumbnail_31_profile_png_51c5c0aa13.png",
   },
   {
     name: "Chef Magno",
@@ -83,7 +85,33 @@ export default class OndeEstamos extends Component {
       <main className="ondeestamos">
         <Header />
 
-        <div className="ondeestamosBanner"></div>
+        <div className="multipleImagesBanner">
+          <div
+            style={{ backgroundImage: `url(${images.ondeestamos1})` }}
+            className="imageDiv"
+          ></div>
+          <div
+            style={{ backgroundImage: `url(${images.ondeestamos2})` }}
+            className="imageDiv"
+          ></div>
+          <div
+            style={{ backgroundImage: `url(${images.ondeestamos3})` }}
+            className="imageDiv"
+          ></div>
+          <div
+            style={{ backgroundImage: `url(${images.ondeestamos4})` }}
+            className="imageDiv"
+          ></div>
+          <div
+            style={{ backgroundImage: `url(${images.ondeestamos5})` }}
+            className="imageDiv"
+          ></div>
+
+          <div
+            style={{ backgroundImage: `url(${images.ondeestamos6})` }}
+            className="imageDiv"
+          ></div>
+        </div>
 
         <div className="ondeestamosHeader">
           <h2>Veja em quais instituições já estamos presentes!</h2>

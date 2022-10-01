@@ -5,14 +5,40 @@ import Form from "../components/form";
 import avatar1 from "../assets/avatar1.svg";
 import avatar2 from "../assets/avatar2.svg";
 import "./about.scss";
+import images from "../assets/index";
 
 export default function About() {
   return (
     <main className="about">
       <Header />
 
-      <section className="about-banner"></section>
+      <div className="multipleImagesBanner">
+        <div
+          style={{ backgroundImage: `url(${images.quemsomos5})` }}
+          className="imageDiv"
+        ></div>
+        <div
+          style={{ backgroundImage: `url(${images.quemsomos2})` }}
+          className="imageDiv"
+        ></div>
+        <div
+          style={{ backgroundImage: `url(${images.quemsomos3})` }}
+          className="imageDiv"
+        ></div>
+        <div
+          style={{ backgroundImage: `url(${images.quemsomos4})` }}
+          className="imageDiv"
+        ></div>
+        <div
+          style={{ backgroundImage: `url(${images.quemsomos1})` }}
+          className="imageDiv"
+        ></div>
 
+        <div
+          style={{ backgroundImage: `url(${images.quemsomos6})` }}
+          className="imageDiv"
+        ></div>
+      </div>
       <section className="about-section-text">
         <h2 className="orange">
           Desça e conheça o<br />
