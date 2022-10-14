@@ -135,7 +135,7 @@ export default function Home() {
               <img name="appstore" src={appstore} alt="" />
             </a>
 
-            <a className="appstoreIcon" href="">
+            <a className="appstoreIcon" href=" https://play.google.com/store/apps/details?id=br.com.rangosemfila.rangoapp">
               <img name="googleplay" src={googleplay} alt="" />
             </a>
           </div>
