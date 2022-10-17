@@ -132,11 +132,19 @@ export default function Home() {
               className="appstoreIcon"
               href="https://apps.apple.com/br/app/rango/id1562027417"
             >
-              <img name="appstore" src={appstore} alt="" />
+              <img id="gtm-appstore" name="appstore" src={appstore} alt="" />
             </a>
 
-            <a className="appstoreIcon" href=" https://play.google.com/store/apps/details?id=br.com.rangosemfila.rangoapp">
-              <img name="googleplay" src={googleplay} alt="" />
+            <a
+              className="appstoreIcon"
+              href=" https://play.google.com/store/apps/details?id=br.com.rangosemfila.rangoapp"
+            >
+              <img
+                id="gtm-googleplay"
+                name="googleplay"
+                src={googleplay}
+                alt=""
+              />
             </a>
           </div>
 
@@ -160,17 +168,17 @@ export default function Home() {
           <Carousel className="media" variant="dark">
             <Carousel.Item>
               <a href="https://jornaldebrasilia.com.br/estilo-de-vida/gastronomia/rango-estudantes-criam-app-de-alimentacao-para-centros-universitarios/#.YrxUO34qkTI.whatsapp">
-                <img className="mediaImg" src={LogoJBR} alt="First slide" />
+                <img id="JBR" className="mediaImg" src={LogoJBR} alt="First slide" />
               </a>
             </Carousel.Item>
             <Carousel.Item>
               <a href="https://timesbrasilia.com.br/destaque/rango-app-de-alimentacao-para-centros-universitarios-e-criado-no-ceub/">
-                <img className="mediaImg" src={LogoTimes} alt="Second slide" />
+                <img id="TIMES" className="mediaImg" src={LogoTimes} alt="Second slide" />
               </a>
             </Carousel.Item>
             <Carousel.Item>
               <a href="https://agenciainforma.app.br/rango-app-de-alimentacao-para-centros-universitarios-e-criado-no-ceub/">
-                <img className="mediaImg" src={LogoAgencia} alt="Third slide" />
+                <img id="AGENCIA" className="mediaImg" src={LogoAgencia} alt="Third slide" />
               </a>
             </Carousel.Item>
           </Carousel>

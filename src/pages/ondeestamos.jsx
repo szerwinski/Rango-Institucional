@@ -133,11 +133,7 @@ export default class OndeEstamos extends Component {
               <div className="cardHeader">
                 <img src={ceubLogo} alt="" />
 
-                <h2>
-                  UniCeub
-                  <br />
-                  <p>Restaurantes parceiros: </p>
-                </h2>
+                <h2>UniCeub</h2>
               </div>
 
               <div className="icons">
@@ -158,11 +154,7 @@ export default class OndeEstamos extends Component {
               <div className="cardHeader">
                 <img src={catolica} alt="" />
 
-                <h2>
-                  UCB
-                  <br />
-                  <p>Restaurantes parceiros: </p>
-                </h2>
+                <h2>UCB</h2>
               </div>
 
               <div className="icons">
@@ -183,11 +175,7 @@ export default class OndeEstamos extends Component {
               <div className="cardHeader">
                 <img src={udfLogo} alt="" />
 
-                <h2>
-                  UDF
-                  <br />
-                  <p>Restaurantes parceiros: </p>
-                </h2>
+                <h2>UDF</h2>
               </div>
 
               <div className="icons">
