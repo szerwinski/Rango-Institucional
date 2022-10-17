@@ -11,17 +11,11 @@ import $ from "jquery";
 import images from "../assets/index";
 
 import "./ondeestamos.scss";
-
 const ceub = [
   {
-    name: "Rei Arthur Pastelaria",
+    name: "Geléia",
     image:
-      "https://s3.sa-east-1.amazonaws.com/restaurants.images/29/profile/thumbnail_29_profile_png_8cf0cbd944.png",
-  },
-  {
-    name: "Rossoni",
-    image:
-      "https://s3.sa-east-1.amazonaws.com/restaurants.images/25/profile/thumbnail_25_profile_png_5cdccf4fa0.png",
+      "https://s3.sa-east-1.amazonaws.com/restaurants.images/19/profile/thumbnail_19_profile_png_6cf18d20d2.png",
   },
   {
     name: "Fast Grill",
@@ -29,23 +23,28 @@ const ceub = [
       "https://s3.sa-east-1.amazonaws.com/restaurants.images/16/profile/thumbnail_16_profile_png_ae5d48bfdf.png",
   },
   {
+    name: "Aprovado Lanches",
+    image:
+      "https://s3.sa-east-1.amazonaws.com/restaurants.images/10/profile/thumbnail_10_profile_png_7fd7eb949b.png",
+  },
+  {
+    name: "Rossoni",
+    image:
+      "https://s3.sa-east-1.amazonaws.com/restaurants.images/25/profile/thumbnail_25_profile_png_5cdccf4fa0.png",
+  },
+  {
+    name: "Rei Arthur Pastelaria",
+    image:
+      "https://s3.sa-east-1.amazonaws.com/restaurants.images/29/profile/thumbnail_29_profile_png_8cf0cbd944.png",
+  },
+  {
     name: "Calzoon",
     image:
       "https://s3.sa-east-1.amazonaws.com/restaurants.images/17/profile/thumbnail_17_profile_png_256a070e53.png",
   },
-  {
-    name: "Geléia",
-    image:
-      "https://s3.sa-east-1.amazonaws.com/restaurants.images/19/profile/thumbnail_19_profile_png_6cf18d20d2.png",
-  },
 ];
 
 const ucb = [
-  {
-    name: "Fada Café",
-    image:
-      "https://s3.sa-east-1.amazonaws.com/restaurants.images/30/profile/thumbnail_30_profile_png_1e7691e20f.png",
-  },
   {
     name: "Banzos Burguer",
     image:
@@ -55,6 +54,11 @@ const ucb = [
     name: "Chef Magno",
     image:
       "https://s3.sa-east-1.amazonaws.com/restaurants.images/26/profile/thumbnail_26_profile_png_06269451e9.png",
+  },
+  {
+    name: "Fada Café",
+    image:
+      "https://s3.sa-east-1.amazonaws.com/restaurants.images/30/profile/thumbnail_30_profile_png_1e7691e20f.png",
   },
   {
     name: "Lancheteria Gourmet",
