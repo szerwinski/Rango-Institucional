@@ -25,7 +25,10 @@ export default function Download() {
       </div>
 
       <Container fluid className="download-section-buttons">
-        <a className="download-button" href="https://portal.rangosemfila.com.br/#/dash">
+        <a
+          className="download-button"
+          href="https://portal.rangosemfila.com.br/#/dash"
+        >
           <Button>
             <img
               className="button-logo"
@@ -36,7 +39,10 @@ export default function Download() {
           </Button>
         </a>
 
-        <a className="download-button" href="">
+        <a
+          className="download-button"
+          href="https://s3.sa-east-1.amazonaws.com/rango.dashboard/rango_makers_launcher.exe"
+        >
           <Button>
             <img
               className="button-logo"
@@ -47,15 +53,18 @@ export default function Download() {
           </Button>
         </a>
 
-        <a className="download-button" href="">
+        {/* <a className="download-button" href="">
           <Button>
             <img src="https://img.icons8.com/color/48/000000/safari--v1.png" />
 
             <p>Mac</p>
           </Button>
-        </a>
+        </a> */}
 
-        <a className="download-button" href="https://apps.apple.com/br/app/rango-makers/id1611051740">
+        <a
+          className="download-button"
+          href="https://apps.apple.com/br/app/rango-makers/id1611051740"
+        >
           <Button>
             <img className="button-logo" src={logoApple} />
 
@@ -63,7 +72,10 @@ export default function Download() {
           </Button>
         </a>
 
-        <a className="download-button" href="https://play.google.com/store/apps/details?id=br.com.rangosemfila.rango_dashboard">
+        <a
+          className="download-button"
+          href="https://play.google.com/store/apps/details?id=br.com.rangosemfila.rango_dashboard"
+        >
           <Button>
             <img
               className="button-logo"
