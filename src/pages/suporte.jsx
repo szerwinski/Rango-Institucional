@@ -6,7 +6,7 @@ import SizedDivisor from "../styles/sized-divisor"
 import BaseTextAreaInput from "../styles/input/base-text-area-input"
 import Header from "../components/header";
 
-const Div1 = styled(Flexbox)`
+const Background = styled(Flexbox)`
   width: 100vw;
   height: 100vh;
   background-color: #E8E8E8;
@@ -70,7 +70,7 @@ const FormWrapper = styled(Flexbox)`
 `
 
 export default function SuportScreen() {
-  return <Div1>
+  return <Background>
     <Header/>
     
     <Flexbox flexDirection='column' style={{ height: '100%' }}>
@@ -100,5 +100,5 @@ export default function SuportScreen() {
       </Container>
     </Flexbox>
     </Flexbox>
-  </Div1>;
+  </Background>;
 }
