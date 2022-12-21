@@ -5,6 +5,7 @@ import BaseInput from "../styles/input/base-input"
 import SizedDivisor from "../styles/sized-divisor"
 import BaseTextAreaInput from "../styles/input/base-text-area-input"
 import Header from "../components/header";
+import React from "react"
 
 const Background = styled(Flexbox)`
   width: 100vw;
@@ -12,7 +13,7 @@ const Background = styled(Flexbox)`
 `
 
 const Image = styled.img`
-  width: 80%;
+  width: 70%;
 `
 
 const Container = styled(Flexbox)`
@@ -69,10 +70,12 @@ const FormWrapper = styled(Flexbox)`
 `
 
 export default function SuportScreen() {
+  const [isCellphone] = React.useState(window.innerWidth <= 800)
+  console.log(isCellphone)
   return <Background>
     <Header/>
-    <Flexbox flexDirection='column' style={{ height: '100%' }}>
-    <Flexbox style={{ backgroundColor: '#E8E8E8', padding: '40px 0px' }}>
+    <Flexbox flexDirection='column' style={{ height: '100%', width: '100%' }}>
+    <Flexbox style={{ backgroundColor: '#E8E8E8', padding: '40px 0px', width: '100%' }}>
       <Container>
         <Image src={AnimacaoSuporte}/>
       </Container>
