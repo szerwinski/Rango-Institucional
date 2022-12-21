@@ -9,7 +9,6 @@ import Header from "../components/header";
 const Background = styled(Flexbox)`
   width: 100vw;
   height: 100vh;
-  background-color: #E8E8E8;
 `
 
 const Image = styled.img`
@@ -72,9 +71,8 @@ const FormWrapper = styled(Flexbox)`
 export default function SuportScreen() {
   return <Background>
     <Header/>
-    
     <Flexbox flexDirection='column' style={{ height: '100%' }}>
-    <Flexbox>
+    <Flexbox style={{ backgroundColor: '#E8E8E8', padding: '40px 0px' }}>
       <Container>
         <Image src={AnimacaoSuporte}/>
       </Container>
