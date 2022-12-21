@@ -2,8 +2,8 @@ import styled from "styled-components"
 import Flexbox from "../styles/flexbox"
 import AnimacaoSuporte from "../assets/gif/animação_suporte.gif"
 import BaseInput from "../styles/input/base-input"
-import SizedDivisor from "../styles/sized-divisor"
 import BaseTextAreaInput from "../styles/input/base-text-area-input"
+import SizedDivisor from "../styles/sized-divisor"
 import Header from "../components/header";
 import React from "react"
 
@@ -71,20 +71,37 @@ const FormWrapper = styled(Flexbox)`
 
 export default function SuportScreen() {
   const [isCellphone] = React.useState(window.innerWidth <= 800)
+
   console.log(isCellphone)
   return <Background>
     <Header/>
     <Flexbox flexDirection='column' style={{ height: '100%', width: '100%' }}>
     <Flexbox style={{ backgroundColor: '#E8E8E8', padding: '40px 0px', width: '100%' }}>
-      <Container>
-        <Image src={AnimacaoSuporte}/>
-      </Container>
-      <VerticalLine/>
+      {
+      isCellphone  ? <div/> :
+        <Container>
+          <Image src={AnimacaoSuporte}/>
+        </Container>
+      }
+      {
+      isCellphone  ? <div/> :
+        <VerticalLine/>
+      }
       <Container>
         <FormWrapper flexDirection='column'>
+          {
+            isCellphone  ? <SizedDivisor height='40'/>: <div/>
+          }
           <Title>Rango Suporte</Title>
           <HorizontalLine/>
           <Description>Preencha o formulário abaixo para nos enviar uma mensagem de suporte Responderemos assim que possível.</Description>
+          {
+            isCellphone  ? 
+              <Flexbox flexDirection='column'>
+                <SizedDivisor height='40'/>
+                <Image src={AnimacaoSuporte}/>
+              </Flexbox> : <div/>
+          }
           <SizedDivisor height='40'/>
           <Flexbox style={{width: 'calc(100% - 20px)', margin: '0px 50px'}}>
             <Input placeholder='Nome' type='string'/>
