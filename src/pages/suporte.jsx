@@ -50,6 +50,13 @@ const Description = styled.div`
   text-align: center;
 `
 
+const RadioLabel = styled.div`
+  color: #F28A33;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+`
+
 const Button = styled.button`
 margin-top: 20px;
 padding: 4px 0px;
@@ -69,10 +76,22 @@ const FormWrapper = styled(Flexbox)`
   width: 80%;
 `
 
+const RadioButton = styled.input`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  accent-color: #52E899;
+  
+  &:checked {
+    border: none;
+  }
+`
+
 export default function SuportScreen() {
   const [isCellphone] = React.useState(window.innerWidth <= 800)
+  const [contactForm, setContactForm] = React.useState(null)
 
-  console.log(isCellphone)
   return <Background>
     <Header/>
     <Flexbox flexDirection='column' style={{ height: '100%', width: '100%' }}>
@@ -88,9 +107,9 @@ export default function SuportScreen() {
         <VerticalLine/>
       }
       <Container>
-        <FormWrapper flexDirection='column'>
+        <FormWrapper flexDirection='column' style={{ height: '100%' }}>
           {
-            isCellphone  ? <SizedDivisor height='40'/>: <div/>
+            isCellphone  ? <SizedDivisor style={{ height: '15vh' }}/>: <div/>
           }
           <Title>Rango Suporte</Title>
           <HorizontalLine/>
@@ -109,7 +128,43 @@ export default function SuportScreen() {
             <Input placeholder='Restaurante' type='string' />
           </Flexbox>
           <SizedDivisor height='20'/>
-          <Input placeholder='Contato' type='string' />
+          <Flexbox style={{width: 'calc(100% - 20px)' }}>
+            <Flexbox>
+              <RadioButton type="radio" name="contact" value="phone" onChange={ (value) => {
+                  if(value.target.checked) {
+                    setContactForm('phone')
+                  }
+                }
+              }/>
+              <SizedDivisor width='8'/>
+              <RadioLabel>Telefone</RadioLabel>
+            </Flexbox>
+            <SizedDivisor width='10'/>
+            <Flexbox>
+              <RadioButton type="radio" name="contact" value="mail" onChange={ (value) => {
+                  if(value.target.checked) {
+                    setContactForm('mail')
+                  }
+                }
+              }/>
+              <SizedDivisor width='8'/>
+              <RadioLabel>Email</RadioLabel>
+            </Flexbox>
+            {
+            isCellphone  ? <div/> :
+            <Flexbox flexDirection='row' style={{flex: '1' }}>
+              <SizedDivisor width='20'/>
+              <Input placeholder='Contato' type='string' style={{ flex: '1' }}/>
+              </Flexbox>
+          }
+          </Flexbox>
+          {
+            isCellphone  ? 
+            <Flexbox flexDirection='column' style={{width: '100%' }}>
+                <SizedDivisor height='20'/>
+                <Input placeholder='Contato' type='string'/>
+              </Flexbox> : <div/>
+          }
           <SizedDivisor height='20'/>
           <BaseTextAreaInput rows={5} placeholder='Relate seu problema neste campo'/>
           <SizedDivisor height='40'/>
