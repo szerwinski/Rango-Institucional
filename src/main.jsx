@@ -9,9 +9,10 @@ import ScrollToTop from "./hooks/scrolltop";
 import EmailConfirmation from "./pages/email-confirmation";
 import RestorePassword from "./pages/restore-password";
 import LinksPage from "./pages/linksPage";
+import OndeEstamos from "./pages/ondeestamos";
+import SuportScreen from "./pages/suporte"
 
 import "./base.scss";
-import OndeEstamos from "./pages/ondeestamos";
 
 ReactDOM.render(
   <HashRouter>
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="redefinir-senha" element={<RestorePassword />} />
       <Route path="links" element={<LinksPage />} />
       <Route path="ondeestamos" element={<OndeEstamos />} />
+      <Route path="suporte" element={<SuportScreen />} />
     </Routes>
   </HashRouter>,
   document.getElementById("root")
