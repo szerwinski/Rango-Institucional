@@ -108,7 +108,7 @@ export default function SuportScreen() {
     }
     console.log(body)
     const response = await  axios.post(
-      "http://localhost:1337/v2/sendSuportFormMail",
+      "https://www.api.rangosemfila.com.br/v2/sendSuportFormMail",
       body
     )
     console.log(response)
