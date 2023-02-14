@@ -18,6 +18,7 @@ import LogoJBR from "../assets/jbr.png";
 import LogoTimes from "../assets/times.png";
 import LogoAgencia from "../assets/agenciainforma.png";
 import { Carousel } from "react-bootstrap";
+import YoutubeEmbed  from "../components/youtube";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -257,6 +258,8 @@ export default function Home() {
             <br />
             <span>- Steve Jobs</span>
           </h3>
+
+          {/* <YoutubeEmbed embedId="YA2SGmYNQrM" /> */}
         </div>
 
         <Form />
