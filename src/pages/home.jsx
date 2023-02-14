@@ -258,8 +258,7 @@ export default function Home() {
             <br />
             <span>- Steve Jobs</span>
           </h3>
-
-          {/* <YoutubeEmbed embedId="YA2SGmYNQrM" /> */}
+          <YoutubeEmbed embedId="YA2SGmYNQrM" />
         </div>
 
         <Form />
