@@ -11,7 +11,7 @@ export default function Footer() {
 
       <span>
         <p className="footer-copyright">
-          Copyright 2021 ® RanGo - Todos os direitos reservados RanGo com HD do
+          Copyright 2023 ® RanGo - Todos os direitos reservados RanGo com HD do
           Brasil Serviços de Tecnologia da Informação LTDA | CNPJ
           37.200.852/0001-32
         </p>
