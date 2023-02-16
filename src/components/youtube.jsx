@@ -4,7 +4,7 @@ import "./youtube.scss";
 
 export default function YoutubeEmbed({ embedId }) {
     return (
-        <div className="video-wrapper">
+        <div className="responsive-iframe-container">
         <iframe
           src={`https://www.youtube.com/embed/${embedId}`}
           frameborder="0"
