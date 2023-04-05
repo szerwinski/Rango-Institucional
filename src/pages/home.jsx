@@ -10,6 +10,9 @@ import three from "../assets/03.svg";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import icon3 from "../assets/icon3.svg";
+import G1Logo from "../assets/na-midia/g1-logo-2022.svg";
+import CB from "../assets/na-midia/cb.png";
+import Record from "../assets/na-midia/logo-record.png";
 import "./home.scss";
 import Form from "../components/form.jsx";
 import Footer from "../components/footer.jsx";
@@ -168,6 +171,21 @@ export default function Home() {
 
           <Carousel className="media" variant="dark">
             <Carousel.Item>
+              <a href="https://g1.globo.com/df/distrito-federal/noticia/2023/03/17/aplicativo-criado-por-jovens-de-brasilia-promete-acabar-com-filas-em-lanchonetes-de-escolas-e-universidades.ghtml">
+                <img id="G1" className="mediaImg" src={G1Logo} alt="g1 logo" style={{ padding: '32px', backgroundColor: "white" }} />
+              </a>
+            </Carousel.Item>
+            <Carousel.Item>
+              <a href="https://www.correiobraziliense.com.br/euestudante/trabalho-e-formacao/2023/04/5083738-universitarios-criam-app-para-driblar-filas-em-cantinas-e-restaurantes-de-escolas-e-faculdades.html">
+                <img id="CorreioBrasiliense" className="mediaImg" src={CB} alt="logo correio brasiliense"  style={{ backgroundColor: "white", padding: '0px 20px', objectFit: 'contain' }}  />
+              </a>
+            </Carousel.Item>
+            <Carousel.Item>
+              <a href="https://noticias.r7.com/brasilia/df-no-ar/videos/dois-estudantes-de-brasilia-criam-aplicativo-para-evitar-filas-na-hora-do-lanche-30032023">
+                <img id="RecordTV" className="mediaImg" src={Record} alt="logo record tv"  style={{ backgroundColor: "white", objectFit: 'contains', padding: '4.5rem' }}  />
+              </a>
+            </Carousel.Item>
+            <Carousel.Item>
               <a href="https://jornaldebrasilia.com.br/estilo-de-vida/gastronomia/rango-estudantes-criam-app-de-alimentacao-para-centros-universitarios/#.YrxUO34qkTI.whatsapp">
                 <img id="JBR" className="mediaImg" src={LogoJBR} alt="First slide" />
               </a>
@@ -258,7 +276,9 @@ export default function Home() {
             <br />
             <span>- Steve Jobs</span>
           </h3>
-          <YoutubeEmbed embedId="_UWkvYFjs_A" />
+
+          <YoutubeEmbed embedId="mbZBJ0yhLac" />
+
         </div>
 
         <Form />
